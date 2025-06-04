@@ -10826,7 +10826,7 @@ bool pc_jobchange(map_session_data *sd,int32 job, char upper)
 #else
 	sd->status.body = 0;
 #endif
-	clif_changelook(&sd->bl,LOOK_BODY2,sd->status.body);
+	clif_changelook(sd,LOOK_BODY2, sd->status.body);
 
 	sd->status.class_ = job;
 	fame_flag = pc_famerank(sd->status.char_id,sd->class_&MAPID_UPPERMASK);
